@@ -2,4 +2,21 @@
 
 .header {
   background: $blue;
+  margin: 0 auto;
+  width: 40%;
+  margin-top: 22px;
+  border-radius: 24px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 56px;
+  }
+  li {
+    font-family: $title;
+    font-weight: 100;
+    font-size: 26px;
+    color: $background;
+    line-height: 100%;
+  }
 }

@@ -29,3 +29,8 @@ p {
   font-family: $body;
   font-size: 20px;
 }
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
