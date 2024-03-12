@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "modak-regular";
+  src: url(/fonts/MODAK-REGULAR.TTF);
+}
+@font-face {
+  font-family: "poppins-black";
+  src: url(/fonts/POPPINS-BLACK.TTF);
+}
+@font-face {
+  font-family: "poppins-regular";
+  src: url(/fonts/POPPINS-REGULAR.TTF);
+}
+
+$title: "modak-regular";
+$subTitle: "poppins-black";
+$body: "poppins-regular";
+
+$background: #faf5e1;
+$blue: #012fa7;
+$pink: #e44685;
+$dark: #000000;
