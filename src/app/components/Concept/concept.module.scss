@@ -1,0 +1,24 @@
+.conceptContainer {
+  margin-top: 124px;
+}
+
+.concept {
+  display: flex;
+  margin-top: 124px;
+  .imgContainer {
+    width: 50%;
+    height: 400px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .conceptText {
+    width: 50%;
+    margin-left: 60px;
+    h3 {
+      margin-bottom: 24px;
+    }
+  }
+}
