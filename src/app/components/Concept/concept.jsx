@@ -8,6 +8,7 @@ export default function Concept() {
   const container = useRef(null);
   const concept1 = useRef(null);
   const concept2 = useRef(null);
+  const concept3 = useRef(null);
   // const { scrollYProgress } = useScroll({
   //   target: container,
   //   offset: ["start start", "end end"],
@@ -18,49 +19,42 @@ export default function Concept() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: concept2.current,
-        scrub: true,
-        start: "top bottom-=100px",
-        end: "+=300px",
-        markers: true,
-      },
-    });
+    const coneptAnim = (concept1, concept2) => {
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: concept2.current,
+          scrub: true,
+          start: "top bottom-=100px",
+          end: "+=300px",
+          markers: true,
+        },
+      });
 
-    const imgContainerConcept1 = concept1.current.querySelector(
-      `.${styles.imgContainer}`
-    );
-    const imgContainerConcept2 = concept2.current.querySelector(
-      `.${styles.imgContainer}`
-    );
+      const imgContainerConcept1 = concept1.current.querySelector(
+        `.${styles.imgContainer}`
+      );
+      const imgContainerConcept2 = concept2.current.querySelector(
+        `.${styles.imgContainer}`
+      );
 
-    // timeline.to(
-    //   concept1.current,
-    //   {
-    //     opacity: 0,
-    //   },
-    //   0.5
-    // );
-    timeline.to(
-      imgContainerConcept1,
-      {
-        opacity: 0,
-        transform: "rotate(-45deg) translateY(-100%)",
-      },
-      0.25
-    );
+      timeline.to(
+        imgContainerConcept1,
+        {
+          opacity: 0,
+          transform: "rotate(-45deg) translateY(-100%)",
+        },
+        0.25
+      );
 
-    // timeline.fromTo(
-    //   concept2.current,
-    //   { opacity: 0, transform: "rotate(-45deg)" },
-    //   { opacity: 1, transform: "rotate(0deg)" }
-    // );
-    timeline.fromTo(
-      imgContainerConcept2,
-      { opacity: 0, transform: "rotate(45deg) translateY(100%)" }, // Position de départ
-      { opacity: 1, transform: "rotate(0deg) translateY(0%)" } // Position finale
-    );
+      timeline.fromTo(
+        imgContainerConcept2,
+        { opacity: 0, transform: "rotate(45deg) translateY(100%)" },
+        { opacity: 1, transform: "rotate(0deg) translateY(0%)" }
+      );
+    };
+    coneptAnim(concept1, concept2);
+    coneptAnim(concept2, concept3);
+
     console.log(concept1.current);
   }, []);
 
@@ -93,6 +87,23 @@ export default function Concept() {
         </div>
       </div>
       <div ref={concept2} className={styles.concept}>
+        <div className={styles.imgContainer}>
+          <img src="/images/illu.png" alt="" />
+        </div>
+        <div className={styles.conceptText}>
+          <h3>Qui sommes-nous 2</h3>
+          <p>
+            Une sélection de vêtements Vintage, ainsi que Nos Séries Limitées,
+            fabriquées en France à partir de stocks de tissus dormants ou
+            upcyclées. Une sélection de vêtements Vintage, ainsi que Nos Séries
+            Limitées, fabriquées en France à partir de stocks de tissus dormants
+            ou upcyclées.Une sélection de vêtements Vintage, ainsi que Nos
+            Séries Limitées, fabriquées en France à partir de stocks de tissus
+            dormants ou upcyclées.
+          </p>
+        </div>
+      </div>
+      <div ref={concept3} className={styles.concept}>
         <div className={styles.imgContainer}>
           <img src="/images/illu.png" alt="" />
         </div>
