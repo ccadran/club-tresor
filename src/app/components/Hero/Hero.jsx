@@ -10,8 +10,11 @@ export default function Hero() {
         <h1>Club Trésor</h1>
         <p>Parce que votre amour est indémodable</p>
       </div>
-      <div ref={imageRef} className={styles.heroIllustrations}>
-        <img src="/images/illu.png" alt="" />
+      <div className={styles.heroAnimations}>
+        <div className={styles.space}></div>
+        <div ref={imageRef} className={styles.heroIllustrations}>
+          <img src="/images/illu.png" alt="" />
+        </div>
       </div>
     </div>
   );
