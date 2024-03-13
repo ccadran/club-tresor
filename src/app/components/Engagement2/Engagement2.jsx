@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import styles from "./engagement2.module.scss";
+import gsap from "gsap";
+import { useScroll } from "framer-motion";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Engagement2() {
+  const title = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: title.current,
+        scrub: true,
+        start: "top center+=200px",
+        end: "top top+=200px",
+        markers: true,
+      },
+    });
+    timeline.to(title.current, { margin: "0 30vw" });
+  }, []);
+
   return (
     <div className={styles.engagementContainer}>
-      <h3>
+      <h3 ref={title}>
         <span>Un engagement</span>
         <span> de qualité</span>
       </h3>
@@ -29,7 +49,7 @@ export default function Engagement2() {
           </p>
         </div>
       </div>
-      <div className={styles.engagementBackground}>
+      {/* <div className={styles.engagementBackground}>
         <div className={styles.stickyBg}>
           <div className={styles.sticky}>
             <div className={styles.leftClipPath}></div>
@@ -39,7 +59,16 @@ export default function Engagement2() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      {/* <div className={styles.background}>
+        <div className={styles.backgroundContainer}>
+          <div className={styles.stickyBg}>
+            <div className={styles.imgContainer}>
+              <img src="/images/illu.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 }

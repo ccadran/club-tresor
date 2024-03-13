@@ -9,13 +9,7 @@ export default function Concept() {
   const concept1 = useRef(null);
   const concept2 = useRef(null);
   const concept3 = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: container,
-  //   offset: ["start start", "end end"],
-  // });
-  // window.addEventListener("scroll", () => {
-  //   console.log(scrollYProgress);
-  // });
+
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 

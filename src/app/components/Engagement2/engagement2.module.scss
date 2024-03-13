@@ -4,7 +4,7 @@
   position: relative;
   h3 {
     color: $pink;
-    margin: 0 30vw;
+    margin: 0 20vw;
     display: flex;
     flex-direction: column;
     span:nth-child(2) {
@@ -27,53 +27,69 @@
   }
 }
 
-.engagementBackground {
+.background {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
-  .stickyBg {
-    position: absolute;
-    top: 0vh;
-    bottom: -100vh;
-    left: 0;
-    width: 100%;
-  }
-  .sticky {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    .leftClipPath {
-      background-color: red;
-      left: 0;
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: calc(50% + 1px);
-      overflow: hidden;
-      clip-path: inset(
-        0% calc((1 - 0.55) * 100%) 0% calc((1 - 0.55) * 100%) round
-          calc((1 - 0.55) * 2px)
-      );
-    }
-    .rightClipPath {
-      right: 0;
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: calc(50% + 1px);
-      overflow: hidden;
-    }
-    .imgContainer {
-      height: 100%;
-      width: 100%;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        opacity: 0.1;
-      }
-    }
-  }
+  width: 100%;
+  margin-bottom: 100vh;
 }
+.backgroundContainer {
+  position: absolute;
+  // bottom: -100vh;
+  width: 100%;
+}
+.stickyBg {
+  position: sticky;
+}
+
+// .engagementBackground {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   .stickyBg {
+//     position: absolute;
+//     top: 0vh;
+//     bottom: -100vh;
+//     left: 0;
+//     width: 100%;
+//   }
+//   .sticky {
+//     position: sticky;
+//     top: 0;
+//     height: 100vh;
+//     .leftClipPath {
+//       background-color: red;
+//       left: 0;
+//       position: absolute;
+//       top: 0;
+//       height: 100%;
+//       width: calc(50% + 1px);
+//       overflow: hidden;
+//       clip-path: inset(
+//         0% calc((1 - 0.55) * 100%) 0% calc((1 - 0.55) * 100%) round
+//           calc((1 - 0.55) * 2px)
+//       );
+//     }
+//     .rightClipPath {
+//       right: 0;
+//       position: absolute;
+//       top: 0;
+//       height: 100%;
+//       width: calc(50% + 1px);
+//       overflow: hidden;
+//     }
+//     .imgContainer {
+//       height: 100%;
+//       width: 100%;
+//       img {
+//         height: 100%;
+//         width: 100%;
+//         object-fit: cover;
+//         opacity: 0.1;
+//       }
+//     }
+//   }
+// }
