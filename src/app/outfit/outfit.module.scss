@@ -1,11 +1,15 @@
 @import "../../app/styles/variables.scss";
 
-.container {
-    
-}
-
-.addButton {
+.addbutton {
     border: 2px $blue solid;
     height: 100px;
     width: 100px;
+    outline: none;
+    box-shadow: none;
+    background-color: none;
+    border-radius: 10px;
+}
+
+.subcontainer {
+    display: flex;
 }
