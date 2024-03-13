@@ -49,26 +49,16 @@ export default function Engagement2() {
           </p>
         </div>
       </div>
-      {/* <div className={styles.engagementBackground}>
-        <div className={styles.stickyBg}>
-          <div className={styles.sticky}>
-            <div className={styles.leftClipPath}></div>
-            <div className={styles.rightClipPath}></div>
-            <div className={styles.imgContainer}>
-              <img src="/images/illu.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className={styles.background}>
-        <div className={styles.backgroundContainer}>
-          <div className={styles.stickyBg}>
-            <div className={styles.imgContainer}>
-              <img src="/images/illu.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div> */}
+
+      <div className={styles.imgContainer}>
+        <img src="/images/illu.png" alt="" />
+      </div>
+      <div className={styles.space}>
+        <h4>test</h4>
+      </div>
+      <div className={styles.history}>
+        <h3>Comment est né Club Trésor ?</h3>
+      </div>
     </div>
   );
 }

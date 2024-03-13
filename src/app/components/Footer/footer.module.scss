@@ -1,6 +1,30 @@
 @import "../../styles/variables.scss";
 
 .footer {
-  background-color: $blue;
+  background-color: $black;
   margin-top: 100vh;
+  color: $background;
+  padding: 60px;
+  .footerNav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    .social {
+      display: flex;
+    }
+    .navigation {
+      ul {
+        display: flex;
+        a {
+          margin-left: 24px;
+          color: $background;
+          font-family: $title;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  h1 {
+    text-align: center;
+  }
 }
