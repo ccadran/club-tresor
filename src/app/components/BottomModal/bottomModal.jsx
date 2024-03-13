@@ -11,7 +11,7 @@ const BottomModal = ({ bottoms, selectedBottom, onSelect, onClose }) => {
 
   return (
     <div className={styles.modal}>
-      <h3>Sélectionnez votre bas</h3>
+      <h4>Sélectionnez votre bas</h4>
       <div className={styles.bottomsContainer}>
         {bottoms.map((bottom) => (
           <div key={bottom.id} className={styles.bottomItem} onClick={() => handleSelect(bottom)}>

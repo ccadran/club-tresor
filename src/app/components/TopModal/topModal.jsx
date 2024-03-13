@@ -11,7 +11,7 @@ const TopModal = ({ tops, selectedTop, onSelect, onClose }) => {
 
   return (
     <div className={styles.modal}>
-      <h3>Sélectionnez votre haut</h3>
+      <h4>Sélectionnez votre haut</h4>
       <div className={styles.topsContainer}>
         {tops.map((top) => (
           <div key={top.id} className={styles.topItem} onClick={() => handleSelect(top)}>

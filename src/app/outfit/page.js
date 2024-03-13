@@ -25,6 +25,18 @@ export default function Outfit() {
       image: '/clothes/pull-rayures.jpeg',
       price: '45,00 €',
     },
+    {
+      id: 3,
+      name: "Pull 80's en coton et lin rayé et upcyclé - 8/9 ans, 10/11 ans",
+      image: '/clothes/pull-coton-lin.jpeg',
+      price: '32,00 €',
+    },
+    {
+      id: 4,
+      name: 'Pull à rayures colorblock - 6 ans',
+      image: '/clothes/pull-rayures.jpeg',
+      price: '45,00 €',
+    },
   ];
 
   const bottoms = [
@@ -50,8 +62,8 @@ export default function Outfit() {
 
   return (
     <>
+      <h3 className={styles.title}>Créateur d'outfit</h3>
       <div className={styles.container}>
-        <h3 className={styles.title}>Créateur d'outfit</h3>
         <div className={styles.subcontainer}>
           <div className={styles.top} onClick={displayTop}>
             {selectedTop ? (
@@ -86,23 +98,46 @@ export default function Outfit() {
             )}
           </div>
         </div>
+        <div className={styles.modalscontainer}>
+          <div className={styles.modalscontainer}>
+            <div className={styles.modalscontainer}>
+              {showTopModal && !showBottomModal ? (
+                <TopModal
+                  tops={tops}
+                  selectedTop={selectedTop}
+                  onSelect={(top) => {
+                    setSelectedTop(top);
+                    setShowBottomModal(false);
+                    setShowTopModal(true);
+                  }}
+                  onClose={() => {
+                    handleCloseTopModal();
+                    setShowBottomModal(false);
+                  }}
+                />
+              ) : !showTopModal && showBottomModal ? (
+                <BottomModal
+                  bottoms={bottoms}
+                  selectedBottom={selectedBottom}
+                  onSelect={(bottom) => {
+                    setSelectedBottom(bottom);
+                    setShowTopModal(false);
+                    setShowBottomModal(true);
+                  }}
+                  onClose={() => {
+                    handleCloseBottomModal();
+                    setShowTopModal(false);
+                  }}
+                />
+              ) : (
+                <p className={styles.defaultModal}>
+                  Cliquez sur un emplacement à gauche pour ajouter un produit.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
-      {showTopModal && (
-        <TopModal
-          tops={tops}
-          selectedTop={selectedTop}
-          onSelect={setSelectedTop}
-          onClose={handleCloseTopModal}
-        />
-      )}
-      {showBottomModal && (
-        <BottomModal
-          bottoms={bottoms}
-          selectedBottom={selectedBottom}
-          onSelect={setSelectedBottom}
-          onClose={handleCloseBottomModal}
-        />
-      )}
     </>
   );
 }

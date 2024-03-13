@@ -1,0 +1,14 @@
+.topsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topItem {
+    max-width: 250px;
+    text-align: center;
+}
+
+.topItem p {
+    font-size: 10px;
+    text-wrap: wrap;
+}
