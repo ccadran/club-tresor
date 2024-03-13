@@ -16,26 +16,20 @@ export default function Outfit() {
     {
       id: 1,
       name: "Pull 80's en coton et lin rayé et upcyclé - 8/9 ans, 10/11 ans",
-      image: '/clothes/pull-coton-lin.jpeg',
+      image: '/clothes/chemise.png',
       price: '32,00 €',
     },
     {
       id: 2,
       name: 'Pull à rayures colorblock - 6 ans',
-      image: '/clothes/pull-rayures.jpeg',
+      image: '/clothes/pull-rayures-orange.png',
       price: '45,00 €',
     },
     {
-      id: 3,
+      id: 1,
       name: "Pull 80's en coton et lin rayé et upcyclé - 8/9 ans, 10/11 ans",
-      image: '/clothes/pull-coton-lin.jpeg',
-      price: '32,00 €',
-    },
-    {
-      id: 4,
-      name: 'Pull à rayures colorblock - 6 ans',
-      image: '/clothes/pull-rayures.jpeg',
-      price: '45,00 €',
+      image: '/clothes/pull-rouge.png',
+      price: '25,00 €',
     },
   ];
 
@@ -45,10 +39,16 @@ export default function Outfit() {
   ];
 
   const displayTop = () => {
+    if (showBottomModal) {
+      setShowBottomModal(false);
+    }
     setShowTopModal(true);
   };
 
   const displayBottom = () => {
+    if (showTopModal) {
+      setShowTopModal(false);
+    }
     setShowBottomModal(true);
   };
 
@@ -61,8 +61,12 @@ export default function Outfit() {
   };
 
   return (
-    <>
+    <div className={styles.outfitSection}>
       <h3 className={styles.title}>Créateur d'outfit</h3>
+      <div className={styles.nextButtons}>
+        <button className={styles.validateButton}>Valider mon outfit</button>
+        <button className={styles.bagButton}>Ajouter au panier</button>
+      </div>
       <div className={styles.container}>
         <div className={styles.subcontainer}>
           <div className={styles.top} onClick={displayTop}>
@@ -71,13 +75,20 @@ export default function Outfit() {
                 <Image
                   src={selectedTop.image}
                   alt={selectedTop.name}
-                  width={100}
-                  height={100}
+                  width={250}
+                  height={250}
                 />
               </div>
             ) : (
               <div className={styles.addbutton}>
-                <button></button>
+                <button>
+                  <Image
+                    src={'icons/plus-icon.svg'}
+                    width={50}
+                    height={50}
+                    className={styles.buttonIcon}
+                  />
+                </button>
               </div>
             )}
           </div>
@@ -87,57 +98,46 @@ export default function Outfit() {
                 <Image
                   src={selectedBottom.image}
                   alt={selectedBottom.name}
-                  width={100}
-                  height={100}
+                  width={250}
+                  height={250}
                 />
               </div>
             ) : (
               <div className={styles.addbutton}>
-                <button></button>
+                <button>
+                  <Image
+                    src={'icons/plus-icon.svg'}
+                    width={50}
+                    height={50}
+                    className={styles.buttonIcon}
+                  />
+                </button>
               </div>
             )}
           </div>
         </div>
         <div className={styles.modalscontainer}>
-          <div className={styles.modalscontainer}>
-            <div className={styles.modalscontainer}>
-              {showTopModal && !showBottomModal ? (
-                <TopModal
-                  tops={tops}
-                  selectedTop={selectedTop}
-                  onSelect={(top) => {
-                    setSelectedTop(top);
-                    setShowBottomModal(false);
-                    setShowTopModal(true);
-                  }}
-                  onClose={() => {
-                    handleCloseTopModal();
-                    setShowBottomModal(false);
-                  }}
-                />
-              ) : !showTopModal && showBottomModal ? (
-                <BottomModal
-                  bottoms={bottoms}
-                  selectedBottom={selectedBottom}
-                  onSelect={(bottom) => {
-                    setSelectedBottom(bottom);
-                    setShowTopModal(false);
-                    setShowBottomModal(true);
-                  }}
-                  onClose={() => {
-                    handleCloseBottomModal();
-                    setShowTopModal(false);
-                  }}
-                />
-              ) : (
-                <p className={styles.defaultModal}>
-                  Cliquez sur un emplacement à gauche pour ajouter un produit.
-                </p>
-              )}
-            </div>
-          </div>
+          {showTopModal ? (
+            <TopModal
+              tops={tops}
+              selectedTop={selectedTop}
+              onSelect={setSelectedTop}
+              onClose={handleCloseTopModal}
+            />
+          ) : showBottomModal ? (
+            <BottomModal
+              bottoms={bottoms}
+              selectedBottom={selectedBottom}
+              onSelect={setSelectedBottom}
+              onClose={handleCloseBottomModal}
+            />
+          ) : (
+            <p className={styles.defaultModal}>
+              Cliquez sur un emplacement à gauche pour ajouter un produit.
+            </p>
+          )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
