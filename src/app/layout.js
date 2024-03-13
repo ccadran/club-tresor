@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./styles/globals.scss";
-import Header from "./components/Header/header";
-import Footer from "./components/Footer/footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 export const metadata = {
   title: "Create Next App",

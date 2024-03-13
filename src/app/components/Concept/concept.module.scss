@@ -1,13 +1,28 @@
 .conceptContainer {
   margin-top: 124px;
+  position: relative;
+  margin-bottom: 200vh;
+  h2 {
+    margin-bottom: 24px;
+  }
+  position: sticky;
+}
+.space {
+  min-height: 200vh;
 }
 
 .concept {
   display: flex;
-  margin-top: 124px;
+  margin-top: 204px;
+  // position: absolute;
+  position: sticky;
+  top: 15%;
+  // top: 100%;
+  // transform: translateY(-100%);
+  opacity: 1;
   .imgContainer {
     width: 50%;
-    height: 400px;
+    height: 350px;
     img {
       height: 100%;
       width: 100%;
