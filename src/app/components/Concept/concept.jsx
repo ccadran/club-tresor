@@ -25,31 +25,86 @@ export default function Concept() {
           trigger: concept2.current,
           scrub: true,
           start: "top bottom-=100px",
-          end: "+=300px",
+          end: "+=1000px",
           markers: true,
         },
       });
 
-      const imgContainerConcept1 = concept1.current.querySelector(
+      //Concept 1
+      const imgConcept1 = concept1.current.querySelector(
         `.${styles.imgContainer}`
       );
-      const imgContainerConcept2 = concept2.current.querySelector(
-        `.${styles.imgContainer}`
+      const subTitleConcept1 = concept1.current.querySelector(
+        `.${styles.conceptText} h3`
+      );
+      const textConcept1 = concept1.current.querySelector(
+        `.${styles.conceptText} p`
       );
 
+      //Concept 2
+      const imgConcept2 = concept2.current.querySelector(
+        `.${styles.imgContainer}`
+      );
+      const subTitleConcept2 = concept2.current.querySelector(
+        `.${styles.conceptText} h3`
+      );
+      const textConcept2 = concept2.current.querySelector(
+        `.${styles.conceptText} p`
+      );
+
+      //Concept 1
+      timeline.to(imgConcept1, {
+        transform: "rotate(-45deg) translateY(-100%)",
+      });
       timeline.to(
-        imgContainerConcept1,
+        imgConcept1,
         {
           opacity: 0,
           transform: "rotate(-45deg) translateY(-100%)",
         },
-        0.25
+        0.15
+      );
+      timeline.to(
+        subTitleConcept1,
+        {
+          transform: " translateY(-200%)",
+        },
+        0.1
+      );
+      timeline.to(
+        subTitleConcept1,
+        {
+          opacity: 0,
+        },
+        0.1
+      );
+      timeline.to(
+        textConcept1,
+        {
+          opacity: 0,
+          transform: " translateY(-100%)",
+        },
+        0.35
       );
 
+      //Concept 2
+
       timeline.fromTo(
-        imgContainerConcept2,
+        imgConcept2,
         { opacity: 0, transform: "rotate(45deg) translateY(100%)" },
         { opacity: 1, transform: "rotate(0deg) translateY(0%)" }
+      );
+      timeline.fromTo(
+        textConcept2,
+        { opacity: 0, transform: " translateY(100%)" },
+        { opacity: 1, transform: " translateY(0%)" },
+        1
+      );
+      timeline.fromTo(
+        subTitleConcept2,
+        { opacity: 0, transform: " translateX(100%)" },
+        { opacity: 1, transform: " translateX(0%)" },
+        0.8
       );
     };
     coneptAnim(concept1, concept2);

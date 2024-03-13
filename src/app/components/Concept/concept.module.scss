@@ -1,19 +1,24 @@
+@import "../../styles/variables.scss";
+
 .conceptContainer {
+  color: $pink;
   margin-top: 124px;
   position: relative;
   margin-bottom: 200vh;
   h2 {
     margin-bottom: 24px;
   }
-  position: sticky;
+  p {
+    color: $black;
+  }
 }
 .space {
-  min-height: 200vh;
+  min-height: 100vh;
 }
 
 .concept {
   display: flex;
-  margin-top: 204px;
+  margin-top: 304px;
   // position: absolute;
   position: sticky;
   top: 15%;
@@ -32,8 +37,14 @@
   .conceptText {
     width: 50%;
     margin-left: 60px;
+    opacity: 1;
     h3 {
       margin-bottom: 24px;
     }
   }
+}
+
+.concept:nth-of-type(3) {
+  margin-top: 150vh;
+  // background-color: rsed;
 }
