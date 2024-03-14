@@ -11,17 +11,17 @@ const TopModal = ({ tops, selectedTop, onSelect, onClose }) => {
 
   return (
     <div className={styles.modal}>
+    <button className={styles.closeButton} onClick={onClose}>X</button>
       <h4>Sélectionnez votre haut</h4>
       <div className={styles.topsContainer}>
         {tops.map((top) => (
           <div key={top.id} className={styles.topItem} onClick={() => handleSelect(top)}>
-            <img src={top.image} width={150} height={150} alt={top.name} />
+            <img src={top.image} layout="responsive" width={150} height={150} alt={top.name} />
             <p>{top.name}</p>
             <p>{top.price}</p>
           </div>
         ))}
       </div>
-      <button className={styles.closeButton} onClick={onClose}>Close</button>
     </div>
   );
 };

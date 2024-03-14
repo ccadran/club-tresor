@@ -26,7 +26,7 @@ export default function Outfit() {
       price: '45,00 €',
     },
     {
-      id: 1,
+      id: 3,
       name: "Pull 80's en coton et lin rayé et upcyclé - 8/9 ans, 10/11 ans",
       image: '/clothes/pull-rouge.png',
       price: '25,00 €',
@@ -34,8 +34,12 @@ export default function Outfit() {
   ];
 
   const bottoms = [
-    { id: 1, name: 'Jeans', image: '/jeans.jpg' },
-    { id: 2, name: 'Skirt', image: '/skirt.jpg' },
+    {
+      id: 1,
+      name: 'Pantalon bleu',
+      image: '/clothes/pantalon-bleu.png',
+      price: '25,00 €',
+    },
   ];
 
   const displayTop = () => {
@@ -75,8 +79,8 @@ export default function Outfit() {
                 <Image
                   src={selectedTop.image}
                   alt={selectedTop.name}
-                  width={250}
-                  height={250}
+                  width={150}
+                  height={150}
                 />
               </div>
             ) : (
@@ -86,6 +90,7 @@ export default function Outfit() {
                     src={'icons/plus-icon.svg'}
                     width={50}
                     height={50}
+                    alt={'Bouton pour ajouter un haut'}
                     className={styles.buttonIcon}
                   />
                 </button>
@@ -98,8 +103,8 @@ export default function Outfit() {
                 <Image
                   src={selectedBottom.image}
                   alt={selectedBottom.name}
-                  width={250}
-                  height={250}
+                  width={150}
+                  height={200}
                 />
               </div>
             ) : (
@@ -109,6 +114,7 @@ export default function Outfit() {
                     src={'icons/plus-icon.svg'}
                     width={50}
                     height={50}
+                    alt={'Bouton pour ajouter un bas'}
                     className={styles.buttonIcon}
                   />
                 </button>

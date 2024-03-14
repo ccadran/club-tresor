@@ -11,17 +11,17 @@ const BottomModal = ({ bottoms, selectedBottom, onSelect, onClose }) => {
 
   return (
     <div className={styles.modal}>
+    <button className={styles.closeButton} onClick={onClose}>X</button>
       <h4>Sélectionnez votre bas</h4>
       <div className={styles.bottomsContainer}>
         {bottoms.map((bottom) => (
           <div key={bottom.id} className={styles.bottomItem} onClick={() => handleSelect(bottom)}>
-            <img src={bottom.image} alt={bottom.name} />
+            <img src={bottom.image} layout="responsive" alt={bottom.name} />
             <p>{bottom.name}</p>
             <p>{bottom.price}</p>
           </div>
         ))}
       </div>
-      <button className={styles.closeButton} onClick={onClose}>Close</button>
     </div>
   );
 };
