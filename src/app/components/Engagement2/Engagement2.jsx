@@ -49,16 +49,15 @@ export default function Engagement2() {
           </p>
         </div>
       </div>
-
-      <div className={styles.imgContainer}>
-        <img src="/images/illu.png" alt="" />
+      <div className={styles.historyTransition}>
+        <div className={styles.imgContainer}>
+          <img src="/images/illu.png" alt="" />
+        </div>
+        <div className={styles.history}>
+          <h3>Club trésor</h3>
+        </div>
       </div>
-      <div className={styles.space}>
-        <h4>test</h4>
-      </div>
-      <div className={styles.history}>
-        <h3>Comment est né Club Trésor ?</h3>
-      </div>
+      <div className={styles.space}></div>
     </div>
   );
 }
