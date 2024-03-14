@@ -2,14 +2,16 @@
 
 .conceptContainer {
   color: $pink;
-  margin-top: 124px;
+  // margin-top: 124px;
   position: relative;
-  margin-bottom: 60vh;
+  // margin-bottom: 60vh;
+  margin: 124px 60px 60vh 60px;
   h2 {
     margin-bottom: 24px;
   }
   p {
     color: $black;
+    width: 85%;
   }
 }
 .space {
@@ -18,10 +20,10 @@
 
 .concept {
   display: flex;
-  margin-top: 304px;
+  margin-top: 204px;
   // position: absolute;
   position: sticky;
-  top: 15%;
+  top: 10%;
   // top: 100%;
   // transform: translateY(-100%);
   opacity: 1;

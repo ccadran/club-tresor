@@ -85,7 +85,7 @@ export default function Concept() {
 
       timeline.fromTo(
         imgConcept2,
-        { opacity: 0, transform: "rotate(45deg) translateY(100%)" },
+        { opacity: 0, transform: "rotate(45deg) translateY(100%) " },
         { opacity: 1, transform: "rotate(0deg) translateY(0%)" }
       );
       timeline.fromTo(
