@@ -1,11 +1,27 @@
 @import "../../styles/variables.scss";
 
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 9999;
+}
+
 .header {
+  z-index: 9999;
   background: $blue;
   margin: 0 auto;
   width: 40%;
   margin-top: 22px;
   border-radius: 24px;
+  position: fixed;
+  transition: 0.35s;
+  &.hide {
+    transform: translateY(-200%);
+  }
+  &.show {
+    transform: translateY(0%);
+  }
   ul {
     display: flex;
     justify-content: space-between;
