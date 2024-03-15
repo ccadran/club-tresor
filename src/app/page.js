@@ -16,7 +16,6 @@ export default function Home() {
       <Engagement1 />
       <Engagement2 />
       <About />
-      {/* <div className={styles.test}></div> */}
     </main>
   );
 }

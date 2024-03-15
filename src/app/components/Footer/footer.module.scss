@@ -29,3 +29,30 @@
     font-size: 252px;
   }
 }
+
+.newsletter {
+  margin-top: 42px;
+  h4 {
+    margin-bottom: 24px;
+  }
+  p {
+    margin-bottom: 26px;
+  }
+  .email {
+    width: fit-content;
+    border-bottom: 1px solid $background;
+    input {
+      color: $background;
+      background: none;
+      border: none;
+      font-family: $body;
+      font-size: 20px;
+      &::placeholder {
+        color: $background;
+      }
+      &[type="submit"] {
+        cursor: pointer;
+      }
+    }
+  }
+}

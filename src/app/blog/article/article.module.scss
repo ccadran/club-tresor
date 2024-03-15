@@ -1,0 +1,32 @@
+.articleContainer {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  width: 70%;
+  text-align: left;
+  margin: 25vh auto 20vh;
+  h2 {
+    margin-bottom: 16px;
+  }
+  .imgCover {
+    margin-top: 36px;
+    height: 300px;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    margin-bottom: 44px;
+  }
+  .imgContainer {
+    height: 400px;
+    width: 100%;
+    margin: 36px 0;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -43,14 +43,17 @@ export default function Header() {
       >
         {" "}
         <ul>
-          <a href="">
+          <a href="/">
+            <li>Accueil</li>
+          </a>
+          <a href="https://club-tresor.com/">
             <li>Shop</li>
           </a>
           <a href="">
             <li>Galeries</li>
           </a>
-          <a href="">
-            <li>Le club</li>
+          <a href="/blog/article">
+            <li>Le Blog</li>
           </a>
           <a href="">
             <li>Outfit</li>
