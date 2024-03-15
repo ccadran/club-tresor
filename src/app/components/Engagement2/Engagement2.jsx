@@ -124,8 +124,8 @@ export default function Engagement2() {
       </div>
       <div ref={container} className={styles.historyTransition}>
         <div ref={backgroundImageContainer} className={styles.imgContainer}>
-          <img ref={backgroundImage1} src="/images/illu.png" alt="" />
-          <img ref={backgroundImage2} src="/images/illu.png" alt="" />
+          <img ref={backgroundImage1} src="/images/about.png" alt="" />
+          <img ref={backgroundImage2} src="/images/about.png" alt="" />
         </div>
         <div className={styles.history}>
           <h2 ref={histortTitle}>Comment est né Club Trésor ?</h2>

@@ -21,10 +21,10 @@ export default function Footer() {
               <a href="">
                 <li>Galeries</li>
               </a>
-              <a href="/blog/article">
+              <a href="/blog">
                 <li>Le Blog</li>
               </a>
-              <a href="">
+              <a href="/outfit">
                 <li>Outfit</li>
               </a>
             </ul>

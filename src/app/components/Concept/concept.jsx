@@ -120,52 +120,47 @@ export default function Concept() {
       </p>
       <div ref={concept1} className={styles.concept}>
         <div className={styles.imgContainer}>
-          <img src="/images/illu.png" alt="" />
+          <img src="/images/limited.png" alt="" />
         </div>
         <div className={styles.conceptText}>
-          <h3>Qui sommes-nous</h3>
+          <h3>NOS SÉRIES LIMITÉES</h3>
           <p>
-            Une sélection de vêtements Vintage, ainsi que Nos Séries Limitées,
-            fabriquées en France à partir de stocks de tissus dormants ou
-            upcyclées. Une sélection de vêtements Vintage, ainsi que Nos Séries
-            Limitées, fabriquées en France à partir de stocks de tissus dormants
-            ou upcyclées.Une sélection de vêtements Vintage, ainsi que Nos
-            Séries Limitées, fabriquées en France à partir de stocks de tissus
-            dormants ou upcyclées.
+            Nous sélectionnons des rouleaux de tissus Vintage (années 50's aux
+            années 2000) pour créer des mini-séries en quantités limitées,
+            fabriquées en France en atelier de réinsertion à Marseille. <br />{" "}
+            Cette pratique permet d’éviter la surproduction, le stockage et le
+            gaspillage de textile.
           </p>
         </div>
       </div>
       <div ref={concept2} className={styles.concept}>
         <div className={styles.imgContainer}>
-          <img src="/images/illu.png" alt="" />
+          <img src="/images/upcycling.jpg" alt="" />
         </div>
         <div className={styles.conceptText}>
-          <h3>Qui sommes-nous 2</h3>
+          <h3>NOS UPCYCLÉS</h3>
           <p>
-            Une sélection de vêtements Vintage, ainsi que Nos Séries Limitées,
-            fabriquées en France à partir de stocks de tissus dormants ou
-            upcyclées. Une sélection de vêtements Vintage, ainsi que Nos Séries
-            Limitées, fabriquées en France à partir de stocks de tissus dormants
-            ou upcyclées.Une sélection de vêtements Vintage, ainsi que Nos
-            Séries Limitées, fabriquées en France à partir de stocks de tissus
-            dormants ou upcyclées.
+            Nous vous proposons des pièces vintage que nous avons chinées puis
+            revalorisées en y imprimant Bobby, la mascotte Club Trésor, ou en y
+            ajoutant notre patch Re-Loved.
+            <br />
+            <br />
+            Chaque pièce a été upcyclée et est donc unique.
           </p>
         </div>
       </div>
       <div ref={concept3} className={styles.concept}>
         <div className={styles.imgContainer}>
-          <img src="/images/illu.png" alt="" />
+          <img src="/images/vintage.png" alt="" />
         </div>
         <div className={styles.conceptText}>
-          <h3>Qui sommes-nous 2</h3>
+          <h3>NOTRE SELECTION VINTAGE</h3>
           <p>
-            Une sélection de vêtements Vintage, ainsi que Nos Séries Limitées,
-            fabriquées en France à partir de stocks de tissus dormants ou
-            upcyclées. Une sélection de vêtements Vintage, ainsi que Nos Séries
-            Limitées, fabriquées en France à partir de stocks de tissus dormants
-            ou upcyclées.Une sélection de vêtements Vintage, ainsi que Nos
-            Séries Limitées, fabriquées en France à partir de stocks de tissus
-            dormants ou upcyclées.
+            Nous vous proposons des vêtements de seconde main vintage (années
+            50’s aux années 2000) soigneusement sélectionnés pour correspondre à
+            l’ADN et aux critères de qualité de Club Trésor. <br />
+            <br /> Tous ces vêtements sont lavés à 30°C puis repassés avant de
+            vous les proposer.
           </p>
         </div>
       </div>
