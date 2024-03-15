@@ -20,7 +20,6 @@ export default function Concept() {
           scrub: true,
           start: "top bottom-=100px",
           end: "+=1000px",
-          markers: true,
         },
       });
 

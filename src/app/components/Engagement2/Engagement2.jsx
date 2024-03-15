@@ -26,7 +26,6 @@ export default function Engagement2() {
         scrub: true,
         start: "top center+=200px",
         end: "top top+=200px",
-        markers: true,
       },
     });
     timeline.to(title.current, { margin: "0 30vw" });
@@ -37,7 +36,6 @@ export default function Engagement2() {
         scrub: true,
         start: "top bottom",
         end: "bottom bottom-=100px",
-        markers: true,
       },
     });
     timelineImage.to(backgroundImage1.current, {
@@ -58,7 +56,6 @@ export default function Engagement2() {
         scrub: true,
         start: "bottom bottom-=100px",
         end: "bottom bottom-=1000px",
-        markers: true,
       },
     });
     textHistoryTimeline.fromTo(

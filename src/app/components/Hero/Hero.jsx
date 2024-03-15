@@ -19,26 +19,13 @@ export default function Hero() {
         scrub: true,
         start: "top top",
         end: "bottom bottom",
-        markers: true,
       },
     });
 
     timeline.to(imageRef.current, {
-      // opacity: 0.5,
-      // width: "60%",
-      // height: "80vh",
-      // transform: "scale(4.0)",
       duration: 5,
     });
-    // timeline.to(imageContainer.current, {
-    //   // opacity: 0.5,
-    //   // width: "60%",
-    //   height: "80vh",
-    //   // transform: "scale(4.0)",
-    //   // duration: 5,
-    // });
-    // console.log(imagesRef.current);
-    // console.log("reverse", imagesRef.current.reverse());
+
     imagesRef.current.forEach((image, index) => {
       timeline.to(
         image,
