@@ -27,7 +27,7 @@ export default function Engagement1() {
             </p>
           </div>
           <div className={styles.engagement}>
-            <h4>TISSUS EXISTANTS</h4>
+            <h4>Tissus existants</h4>
             <p>
               Nos Séries Limitées sont confectionnées à partir de tissus
               existants issus de stocks dormants. Le processus de création se
@@ -39,14 +39,14 @@ export default function Engagement1() {
             </p>
           </div>
           <div className={styles.engagement}>
-            <h4>COUPES DURABLES</h4>
+            <h4>Coupes durables</h4>
             <p>
               La coupe de notre pantalon est conçue pour évoluer avec la taille
               de l'enfant, pour être porté le plus longtemps possible.
             </p>
           </div>
           <div className={styles.engagement}>
-            <h4>QUANTITÉS LIMITÉES</h4>
+            <h4>Quantités limitées</h4>
             <p>
               En produisant en Séries Limitées, nous évitons les stocks, les
               soldes et le rythme habituel des collections. Cela permet d'éviter

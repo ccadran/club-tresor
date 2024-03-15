@@ -122,7 +122,7 @@ export default function Concept() {
           <img src="/images/limited.png" alt="" />
         </div>
         <div className={styles.conceptText}>
-          <h3>NOS SÉRIES LIMITÉES</h3>
+          <h3>Nos séries limitées</h3>
           <p>
             Nous sélectionnons des rouleaux de tissus Vintage (années 50's aux
             années 2000) pour créer des mini-séries en quantités limitées,
@@ -137,7 +137,7 @@ export default function Concept() {
           <img src="/images/upcycling.jpg" alt="" />
         </div>
         <div className={styles.conceptText}>
-          <h3>NOS UPCYCLÉS</h3>
+          <h3>Nos upcyclés</h3>
           <p>
             Nous vous proposons des pièces vintage que nous avons chinées puis
             revalorisées en y imprimant Bobby, la mascotte Club Trésor, ou en y
@@ -153,7 +153,7 @@ export default function Concept() {
           <img src="/images/vintage.png" alt="" />
         </div>
         <div className={styles.conceptText}>
-          <h3>NOTRE SELECTION VINTAGE</h3>
+          <h3>Notre séléction vintage</h3>
           <p>
             Nous vous proposons des vêtements de seconde main vintage (années
             50’s aux années 2000) soigneusement sélectionnés pour correspondre à

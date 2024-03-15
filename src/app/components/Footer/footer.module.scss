@@ -11,6 +11,11 @@
     margin-bottom: 120px;
     .social {
       display: flex;
+      img {
+        width: 34px;
+        height: 34px;
+        margin-right: 26px;
+      }
     }
     .navigation {
       ul {

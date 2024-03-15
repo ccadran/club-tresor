@@ -7,8 +7,12 @@ export default function Footer() {
       <div className={styles.primaryFooter}>
         <div className={styles.footerNav}>
           <div className={styles.social}>
-            <p>FB</p>
-            <p>Insta</p>
+            <a href="https://www.facebook.com/weloveclubtresor">
+              <img src="/icons/facebook.svg" alt="" />
+            </a>
+            <a href="https://www.instagram.com/clubtresor/">
+              <img src="/icons/instagram.svg" alt="" />
+            </a>
           </div>
           <div className={styles.navigation}>
             <ul>
