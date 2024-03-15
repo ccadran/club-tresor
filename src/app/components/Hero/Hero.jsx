@@ -7,6 +7,7 @@ export default function Hero() {
   const imageRef = useRef();
   const hero = useRef();
   const spaceRef = useRef();
+  const imageContainer = useRef();
   const imagesRef = useRef([]);
 
   useLayoutEffect(() => {
@@ -24,11 +25,18 @@ export default function Hero() {
 
     timeline.to(imageRef.current, {
       // opacity: 0.5,
-      // width: "100%",
-      // height: "100vh",
-      transform: "scale(4.0)",
+      // width: "60%",
+      // height: "80vh",
+      // transform: "scale(4.0)",
       duration: 5,
     });
+    // timeline.to(imageContainer.current, {
+    //   // opacity: 0.5,
+    //   // width: "60%",
+    //   height: "80vh",
+    //   // transform: "scale(4.0)",
+    //   // duration: 5,
+    // });
     // console.log(imagesRef.current);
     // console.log("reverse", imagesRef.current.reverse());
     imagesRef.current.forEach((image, index) => {
@@ -39,7 +47,7 @@ export default function Hero() {
           opacity: 0,
           duration: 0,
 
-          delay: index * 1,
+          delay: index * 1.5,
           onComplete: () => console.log(image + index),
         },
         0
@@ -56,47 +64,47 @@ export default function Hero() {
       <div className={styles.heroAnimations}>
         <div ref={spaceRef} className={styles.space}></div>
         <div ref={imageRef} className={styles.heroIllustrations}>
-          <div className={styles.imgContainer}>
-            <img src="/images/illu2.png" alt="" />
+          <div ref={imageContainer} className={styles.imgContainer}>
+            <img src="/images/about.png" alt="" />
 
             <img
               ref={(el) => (imagesRef.current[7] = el)}
-              src="/images/illu.png"
+              src="/images/avril.png"
               alt=""
             />
             <img
               ref={(el) => (imagesRef.current[6] = el)}
-              src="/images/illu2.png"
+              src="/images/engagement.png"
               alt=""
             />
             <img
               ref={(el) => (imagesRef.current[5] = el)}
-              src="/images/illu.png"
+              src="/images/limited.png"
               alt=""
             />
             <img
               ref={(el) => (imagesRef.current[4] = el)}
-              src="/images/illu2.png"
+              src="/images/popuStore.png"
               alt=""
             />
             <img
               ref={(el) => (imagesRef.current[3] = el)}
-              src="/images/illu.png"
+              src="/images/sarah.png"
               alt=""
             />
             <img
               ref={(el) => (imagesRef.current[2] = el)}
-              src="/images/illu2.png"
+              src="/images/tresor.png"
               alt=""
             />
             <img
               ref={(el) => (imagesRef.current[1] = el)}
-              src="/images/illu.png"
+              src="/images/upcycling.png"
               alt=""
             />
             <img
               ref={(el) => (imagesRef.current[0] = el)}
-              src="/images/illu2.png"
+              src="/images/vintage.png"
               alt=""
             />
           </div>

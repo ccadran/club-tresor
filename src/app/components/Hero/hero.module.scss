@@ -23,19 +23,19 @@
   flex-direction: column;
   align-items: center;
   .space {
-    min-height: 200vh;
+    min-height: 100vh;
   }
   .heroIllustrations {
     margin-top: 78px;
     height: 50%;
-    width: 30%;
+    width: 60%;
     position: sticky;
-    bottom: 0;
+    bottom: 15%;
     // opacity: 0.25;
     .imgContainer {
       position: relative;
       width: 100%;
-      height: 50vh;
+      height: 60vh;
     }
     img {
       position: absolute;
