@@ -5,12 +5,6 @@ import { useScroll } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Engagement2() {
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
   const title = useRef(null);
   const container = useRef(null);
   const backgroundImage1 = useRef();

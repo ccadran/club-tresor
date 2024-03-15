@@ -109,15 +109,17 @@ export default function Concept() {
 
   return (
     <div ref={container} className={styles.conceptContainer}>
-      <h2>Notre concept</h2>
-      <p>
-        Club Trésor est une marque de vêtements pour enfants qui utilise
-        uniquement l’existant pour vous proposer un look unique et cool. Vous y
-        trouverez une sélection de vêtements Vintage, ainsi que Nos Séries
-        Limitées, fabriquées en France à partir de stocks de tissus dormants ou
-        upcyclées. Zéro nouvelle matière première créée. Impact environnemental
-        limité.
-      </p>
+      <div className={styles.conceptIntro}>
+        <h2>Notre concept</h2>
+        <p>
+          Club Trésor est une marque de vêtements pour enfants qui utilise
+          uniquement l’existant pour vous proposer un look unique et cool. Vous
+          y trouverez une sélection de vêtements Vintage, ainsi que Nos Séries
+          Limitées, fabriquées en France à partir de stocks de tissus dormants
+          ou upcyclées. Zéro nouvelle matière première créée. Impact
+          environnemental limité.
+        </p>
+      </div>
       <div ref={concept1} className={styles.concept}>
         <div className={styles.imgContainer}>
           <img src="/images/illu.png" alt="" />

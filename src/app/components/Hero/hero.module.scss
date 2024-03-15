@@ -23,7 +23,7 @@
   flex-direction: column;
   align-items: center;
   .space {
-    min-height: 100vh;
+    min-height: 200vh;
   }
   .heroIllustrations {
     margin-top: 78px;
@@ -32,11 +32,18 @@
     position: sticky;
     bottom: 0;
     // opacity: 0.25;
+    .imgContainer {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+    }
     img {
+      position: absolute;
       height: 100%;
       width: 100%;
       border-radius: 80px 80px 25px 25px;
       object-fit: cover;
+      // opacity: 0;
     }
   }
 }
