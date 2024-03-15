@@ -17,24 +17,33 @@ export default function Hero() {
         trigger: hero.current,
         scrub: true,
         start: "top top",
-        end: "bottom center",
+        end: "bottom bottom",
         markers: true,
       },
     });
 
     timeline.to(imageRef.current, {
-      opacity: 0.5,
+      // opacity: 0.5,
       // width: "100%",
       // height: "100vh",
-      transform: "scale(5.0)",
+      transform: "scale(4.0)",
       duration: 5,
     });
+    // console.log(imagesRef.current);
+    // console.log("reverse", imagesRef.current.reverse());
     imagesRef.current.forEach((image, index) => {
-      timeline.to(image, {
-        opacity: 0.5,
-        // width: "100%",
-        // height: "100vh",
-      });
+      timeline.to(
+        image,
+        {
+          // display: "none",
+          opacity: 0,
+          duration: 0,
+
+          delay: index * 1,
+          onComplete: () => console.log(image + index),
+        },
+        0
+      );
     });
   }, []);
 
@@ -48,23 +57,45 @@ export default function Hero() {
         <div ref={spaceRef} className={styles.space}></div>
         <div ref={imageRef} className={styles.heroIllustrations}>
           <div className={styles.imgContainer}>
+            <img src="/images/illu2.png" alt="" />
+
             <img
-              ref={(el) => (imagesRef.current[0] = el)}
+              ref={(el) => (imagesRef.current[7] = el)}
               src="/images/illu.png"
               alt=""
             />
             <img
-              ref={(el) => (imagesRef.current[1] = el)}
+              ref={(el) => (imagesRef.current[6] = el)}
               src="/images/illu2.png"
               alt=""
             />
             <img
-              ref={(el) => (imagesRef.current[2] = el)}
+              ref={(el) => (imagesRef.current[5] = el)}
               src="/images/illu.png"
               alt=""
             />
             <img
+              ref={(el) => (imagesRef.current[4] = el)}
+              src="/images/illu2.png"
+              alt=""
+            />
+            <img
               ref={(el) => (imagesRef.current[3] = el)}
+              src="/images/illu.png"
+              alt=""
+            />
+            <img
+              ref={(el) => (imagesRef.current[2] = el)}
+              src="/images/illu2.png"
+              alt=""
+            />
+            <img
+              ref={(el) => (imagesRef.current[1] = el)}
+              src="/images/illu.png"
+              alt=""
+            />
+            <img
+              ref={(el) => (imagesRef.current[0] = el)}
               src="/images/illu2.png"
               alt=""
             />
