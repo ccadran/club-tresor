@@ -6,6 +6,7 @@ import Concept from "./components/Concept/Concept";
 import Hero from "./components/Hero/Hero";
 import Engagement1 from "./components/Engagement1/Engagement1";
 import Engagement2 from "./components/Engagement2/Engagement2";
+import About from "./components/About/About";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Concept />
       <Engagement1 />
       <Engagement2 />
+      <About />
       {/* <div className={styles.test}></div> */}
     </main>
   );

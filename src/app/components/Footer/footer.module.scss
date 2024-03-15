@@ -2,9 +2,9 @@
 
 .footer {
   background-color: $black;
-  margin-top: 100vh;
   color: $background;
   padding: 60px;
+  height: 100vh;
   .footerNav {
     display: flex;
     justify-content: space-between;
@@ -26,5 +26,6 @@
   }
   h1 {
     text-align: center;
+    font-size: 252px;
   }
 }
