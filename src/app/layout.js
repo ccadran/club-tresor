@@ -3,7 +3,7 @@
 import { Inter } from "next/font/google";
 import "./styles/globals.scss";
 import Header from "./components/HeaderTest/Header.jsx";
-import Footer from "./components/FooterTest/Footer.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 import { useEffect } from "react";
 
 // export const metadata = {
